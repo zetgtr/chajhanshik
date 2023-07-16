@@ -1,6 +1,15 @@
 {
   "expo": {
     "name": "chajhanshik",
+    "packagerOpts": {
+      "config": "metro.config.js",
+      "sourceExts": [
+        "js",
+        "jsx",
+        "scss",
+        "sass"
+      ]
+    },
     "slug": "chajhanshik",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -17,14 +26,27 @@
     "ios": {
       "supportsTablet": true
     },
+
     "android": {
+      "googleServicesFile" : "./google-services.json",
+      "useNextNotificationsApi": true,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.zetgtr.chajhanshik"
     },
+    "plugins": [
+      "@react-native-firebase/app"
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
-    }
+    },
+    "extra": {
+      "eas": {
+        "projectId": "34de6216-ea00-44e6-a762-6d47b9750c6f"
+      }
+    },
+    "owner": "zetgtr"
   }
 }

@@ -1,0 +1,141 @@
+@import "../../assets/colors.scss";
+.hr{
+  width: 100%;
+  height: 1px;
+  background-color: $gray_price
+}
+.container_product{
+  flex: 1;
+}
+.container_none{
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+  background-color: $background;
+}
+
+.cart{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: 100%;
+  z-index: 100;
+  justify-content: center;
+  background-color: #fff;
+  &_buy{
+    &_container{
+      flex: 0.22;
+      background-color: $background;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    &_btn{
+      margin-top: 20px;
+      margin-right: 10px;
+      padding: 10px;
+      border-radius: 20px;
+      height: 43px;
+      background-color: $pink;
+
+    }
+    &_price{
+      &_box{
+        margin-top: 21px;
+        margin-left: 10px;
+      }
+    }
+  }
+  &_header{
+    font-size: 20px;
+
+    &_remove{
+      margin-top: 6px;
+      color: red;
+    }
+
+  }
+  &_container{
+    margin: 0px 10px;
+    &_header{
+      padding: 10px;
+      flex-direction: row;
+      align-items: center;
+      background-color: $background;
+      justify-content: space-between;
+      &_none{
+        background-color: $background;
+        padding: 10px;
+        align-items: center;
+      }
+    }
+      &_img{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+        //border-bottom: 1px solid red;
+        flex-direction: row;
+        gap: 16px;
+        position: relative;
+        padding: 8px 0;
+      }
+  }
+  &_box{
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    &_header{
+      flex-direction: row;
+      &_text{
+        margin-top: 10px;
+      }
+      justify-content: space-between;
+    }
+    &_price{
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 24px;
+      margin-bottom: 10px;
+      &_btn{
+        width: 40px;
+        height: 100%;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: 10px;
+        &_text{
+          width: 100%;
+          z-index: 10000;
+          position: absolute;
+          top: -11px;
+          left: 10px;
+          align-items: center;
+          font-size: 36px;
+          color: $gray_price;
+        }
+        background: #fff;
+      }
+      &_box{
+        width: 130px;
+      }
+      &_container{
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        border: 2px solid $gray_price;
+        border-radius: 20px;
+        height: 40px;
+        width: 100%;
+        overflow: hidden;
+      }
+    }
+  }
+  &_img{
+    width: 33%;
+    height: 130px;
+    border-radius: 20px;
+
+  }
+}

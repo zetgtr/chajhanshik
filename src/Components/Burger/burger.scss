@@ -1,0 +1,35 @@
+@import "../../assets/colors.scss";
+.burger{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 50px;
+  left: -100%;
+  z-index: 100;
+  flex: 1;
+  flex-direction: row;
+  justify-content: flex-start;
+  &_header{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  &_container{
+    width: 70%;
+  }
+  &_btn{
+    padding: 10px;
+  }
+}
+.container{
+  padding-left: 20px;
+  flex: 1;
+  //width: 70%;
+  z-index: 100;
+  //background-color: $background;
+  &_close{
+    z-index: 1100;
+    width: 30%;
+    height: 100%;
+  }
+}

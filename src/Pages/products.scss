@@ -1,0 +1,60 @@
+@import '../assets/colors.scss';
+.product{
+  &_box{
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    &_container{
+      &_text{
+        padding: 8px;
+      }
+      &_price{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_text{
+          align-items: baseline;
+        }
+        &_btn{
+          background-color: $pink;
+          vertical-align: middle;
+          font-size: 18px;
+          border-radius: 5px;
+          transition: var(--animation-time);
+          cursor: pointer;
+          -webkit-user-select: none;
+          -moz-user-select: none;
+          -ms-user-select: none;
+          user-select: none;
+          -webkit-appearance: none;
+          -moz-appearance: none;
+          appearance: none;
+          min-height: 40px;
+          padding: 6px 16px;
+          margin: 0;
+        }
+      }
+    }
+    &_title{
+      margin-bottom: 16px;
+      font-size: 20px;
+      font-weight: 400;
+    }
+    &_desc{
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+  }
+  &_img{
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+}
+.container{
+  flex: 1;
+  padding: 10px;
+  background-color: $background;
+}

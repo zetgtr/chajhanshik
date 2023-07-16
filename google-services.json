@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "642723499273",
+    "project_id": "chayhanchik-c5599",
+    "storage_bucket": "chayhanchik-c5599.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:642723499273:android:e9120b745a233b5d6257d8",
+        "android_client_info": {
+          "package_name": "com.zetgtr.chajhanshik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "642723499273-bjckhfn287a5o497d78rb3pcdceeu0h1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCkym-476oziAUaVSVfpNvgZAtNcFoBQAA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "642723499273-bjckhfn287a5o497d78rb3pcdceeu0h1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

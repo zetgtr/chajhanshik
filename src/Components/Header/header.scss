@@ -1,0 +1,115 @@
+.container{
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px ;
+  flex-direction: row;
+  width: 100%;
+  height: 50px;
+  position: relative;
+  background: #fff;
+  grid-area: header;
+  box-shadow: 0 5px 5px rgba(0,0,0,.1);
+  z-index: 1;
+}
+
+.img{
+  // width: 70%;
+  width: 45px;
+  max-width: 100%;
+  margin: 5px;
+  padding: 10px;
+  height: 30px;
+}
+
+
+.svg{
+  width: 50px;
+  height: 50px;
+  z-index: 10;
+}
+
+.boxText{
+  flex: 1;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.text{
+  font-size: 20px;
+}
+
+
+.textBack{
+  margin-bottom: 3px;
+  font-size: 20px;
+  margin-left: 5px;
+  color: #aeaeaf;
+}
+
+.icon{
+  color: #3c52a6;
+  padding: 10px;
+}
+//.link{
+//  // top: 30px;
+//  // flex: 1;
+//  // padding-right: 15px;
+//  position: absolute;
+//  width: 20%;
+//  height: 50;
+//  // position: absolute;
+//  // z-index: 2;
+//  // width: 100%;
+//  right: 0;
+//  align-items: center;
+//  justify-content: center;
+//  bottom: 0;
+//// top: inherit;
+//}
+.boxContainerCount{
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+  top: 6px;
+  width: 20px;
+  left: -7px;
+}
+.boxCount{
+  font-size: 12px;
+}
+.boxBack{
+  // width: 20px;
+  // flex: 1;
+  // width: 100%;
+  // height: 50px;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  // margin-right: 15px;
+  right: -5px;
+  width: 21%;
+  z-index: 2;
+// flex-direction: row;
+}
+
+.containerMenu {
+  width: 20px;
+  height: 20px;
+  justify-content: space-between;
+  align-items: center;
+}
+.touchMenu{
+  padding: 10px;
+}
+.barTop{
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+}
+.barButton{
+  width: 100%;
+  height: 3px;
+  background-color: #000;
+}

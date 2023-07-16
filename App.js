@@ -1,20 +1,70 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import React, { useEffect } from "react";
+// import 'react-native-gesture-handler'
+import messaging from "@react-native-firebase/messaging";
+import Router from "./src/Router/Router.jsx";
+import { store } from "./src/Store";
+import { Provider } from "react-redux";
+import PushNotification from "react-native-push-notification";
+import { StatusBar } from "react-native";
+import database, { firebase } from "@react-native-firebase/database";
+import auth from "@react-native-firebase/auth";
 
 export default function App() {
+    // const user = auth().currentUser;
+    // console.log(user)
+  const getPushData = (message) => {
+    const id = auth()?.currentUser?.uid;
+    const app = firebase.app();
+    database(app).ref("token").child(id).child("message").push(message);
+
+    PushNotification.localNotification({
+      message: message.notification.body,
+      title: message.notification.title,
+      when: message.sentTime,
+      tag: message.data.event,
+      largeIconUrl: message.notification.android.imageUrl,
+      channelId: "channel-id",
+    });
+  };
+
+  messaging().onMessage(getPushData);
+  messaging().setBackgroundMessageHandler(getPushData);
+
+  useEffect(() => {
+    auth()
+        .signInAnonymously()
+        .then(() => {
+          console.log("User signed in anonymously");
+        })
+        .catch((error) => {
+          if (error.code === "auth/operation-not-allowed") {
+            console.log("Enable anonymous in your firebase console.");
+          }
+
+          console.error(error);
+        });
+  }, []);
+
+  // const getToken = async () => {
+  //   const token = await messaging().getToken();
+  // };
+  //   getToken()
+  // async check
+  //
+  // useEffect(() => {
+  // messaging().hasPermission()
+  // getToken();
+  // }, []);
+
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <Provider store={store}>
+        <StatusBar
+            animated={true}
+            backgroundColor="#FFFFFF"
+            barStyle={"dark-content"}
+        />
+
+        <Router></Router>
+      </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
